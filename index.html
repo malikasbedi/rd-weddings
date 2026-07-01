@@ -56,25 +56,16 @@ img{display:block;max-width:100%}
 /* Logo */
 .nav-logo{
   text-decoration:none;
-  display:flex;flex-direction:column;
-  gap:2px;flex-shrink:0;
-  line-height:1;
+  display:flex;align-items:center;
+  flex-shrink:0;
 }
-.nl-rd{
-  font-family:var(--serif);
-  font-size:19px;font-weight:600;
-  letter-spacing:.22em;text-transform:uppercase;
+/* Luxury monogram SVG */
+.nav-monogram{
+  width:54px;height:auto;
   color:rgba(255,255,255,.92);
-  transition:color .2s;
+  transition:color .2s;display:block;
 }
-.nl-text{
-  font-size:7.5px;font-weight:400;
-  letter-spacing:.38em;text-transform:uppercase;
-  color:rgba(255,255,255,.42);
-  transition:color .2s;
-}
-.top-nav.solid .nl-rd{color:var(--dark)}
-.top-nav.solid .nl-text{color:var(--muted)}
+.top-nav.solid .nav-monogram{color:var(--dark)}
 /* Centre links */
 .nav-center{
   display:flex;align-items:center;justify-content:center;
@@ -153,7 +144,7 @@ img{display:block;max-width:100%}
   animation-delay:0s;
 }
 .hero-slide:nth-child(2){
-  background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_070734_bb902a34-72a4-40f4-bc53-1bf05f9b3de5.png');
+  background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123430_8747b08a-f66b-4952-878d-def72fe41e5f.png');
   animation-delay:6s;
 }
 .hero-slide:nth-child(3){
@@ -974,11 +965,16 @@ h2 em,h1 em{font-style:italic;font-weight:300}
   .nav-hamburger{display:flex !important}
 
   /* ─── HERO ─── */
+  .hero{height:90vh !important;min-height:500px !important}
   .hero-logo-wrap{top:60px !important}
-  .hero-logo{font-size:clamp(22px,7vw,40px) !important;letter-spacing:.3em !important}
-  .hero-text{padding:0 20px 60px !important}
-  .hero-text h1{font-size:clamp(22px,6.5vw,38px) !important}
+  .hero-logo{font-size:clamp(28px,8vw,46px) !important;letter-spacing:.3em !important}
+  .hero-text{padding:0 20px 56px !important}
+  .hero-text h1{font-size:clamp(30px,8.5vw,48px) !important}
   .hero-scroll-right{display:none !important}
+
+  /* ─── HEADINGS ─── */
+  h2{font-size:clamp(30px,7.5vw,44px) !important}
+  h3{font-size:clamp(16px,4vw,20px) !important}
 
   /* ─── STATS ─── */
   .stats{
@@ -1124,8 +1120,18 @@ h2 em,h1 em{font-style:italic;font-weight:300}
 ══════════════════════════════════════════ -->
 <nav class="top-nav" id="topNav">
   <a href="#home" class="nav-logo" aria-label="RD Weddings">
-    <span class="nl-rd">RD</span>
-    <span class="nl-text">Weddings</span>
+    <svg class="nav-monogram" viewBox="0 0 80 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Top ornamental rule with diamond crest -->
+      <line x1="2" y1="9" x2="26" y2="9" stroke="currentColor" stroke-width="0.6" opacity="0.7"/>
+      <path d="M30 3 L37 9 L30 15 L23 9 Z" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.85"/>
+      <line x1="44" y1="9" x2="78" y2="9" stroke="currentColor" stroke-width="0.6" opacity="0.7"/>
+      <!-- RD monogram -->
+      <text x="40" y="51" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="41" font-weight="300" fill="currentColor" letter-spacing="-2">RD</text>
+      <!-- Bottom thin rule -->
+      <line x1="6" y1="54" x2="74" y2="54" stroke="currentColor" stroke-width="0.4" opacity="0.45"/>
+      <!-- WEDDINGS caption -->
+      <text x="40" y="62" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="5" font-weight="400" fill="currentColor" letter-spacing="5" opacity="0.55">WEDDINGS</text>
+    </svg>
   </a>
   <ul class="nav-center">
     <li><a href="#home">Home</a></li>
@@ -1154,7 +1160,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
     <!-- 1: Outdoor mandap golden hour -->
     <div class="hero-slide" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_070732_488d9481-b72f-41af-8d22-ca0a685cfe54.png')"></div>
     <!-- 2: Bride & groom first dance -->
-    <div class="hero-slide" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_070734_bb902a34-72a4-40f4-bc53-1bf05f9b3de5.png')"></div>
+    <div class="hero-slide" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123430_8747b08a-f66b-4952-878d-def72fe41e5f.png')"></div>
     <!-- 3: Aerial reception dinner -->
     <div class="hero-slide" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_070737_e1a895b4-0e42-472f-ac68-1a2e8c196ffa.png')"></div>
     <!-- 4: Baraat procession golden hour -->
@@ -1221,7 +1227,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
     <div class="photo-row fwd">
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_070943_dcc5fe43-c21d-4c90-9c63-ffe49889717e.png" alt="Indian wedding pheras ceremony" style="height:320px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081746_9ac50221-ba7c-4a6a-b330-e8d3941d0b97.png" alt="Indian wedding sangeet dancing" style="height:320px;width:auto"/>
-      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081748_b5b7ada6-e4e6-49f7-aa48-df5c1297c0b3.png" alt="Indian couple portrait palace" style="height:320px;width:auto"/>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123428_96595d2a-4472-48fe-a250-89fdf58b0ae1.png" alt="Indian couple portrait palace" style="height:320px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081750_2f413817-bec0-4655-83a1-c16409f9d1ed.png" alt="Indian wedding floral corridor" style="height:320px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081752_c16c91f3-d508-4f32-9ad5-3a36b2697d89.png" alt="Indian wedding lounge seating" style="height:320px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081905_d3183e07-55ec-4584-a45a-cccebfa25f3a.png" alt="Indian wedding candlelit dinner" style="height:320px;width:auto"/>
@@ -1230,7 +1236,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
       <!-- duplicate for loop -->
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_070943_dcc5fe43-c21d-4c90-9c63-ffe49889717e.png" alt="Indian wedding pheras ceremony" style="height:320px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081746_9ac50221-ba7c-4a6a-b330-e8d3941d0b97.png" alt="Indian wedding sangeet dancing" style="height:320px;width:auto"/>
-      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081748_b5b7ada6-e4e6-49f7-aa48-df5c1297c0b3.png" alt="Indian couple portrait palace" style="height:320px;width:auto"/>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123428_96595d2a-4472-48fe-a250-89fdf58b0ae1.png" alt="Indian couple portrait palace" style="height:320px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081750_2f413817-bec0-4655-83a1-c16409f9d1ed.png" alt="Indian wedding floral corridor" style="height:320px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081752_c16c91f3-d508-4f32-9ad5-3a36b2697d89.png" alt="Indian wedding lounge seating" style="height:320px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081905_d3183e07-55ec-4584-a45a-cccebfa25f3a.png" alt="Indian wedding candlelit dinner" style="height:320px;width:auto"/>
@@ -1242,7 +1248,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
     <div class="photo-row rev">
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081752_c16c91f3-d508-4f32-9ad5-3a36b2697d89.png" alt="Indian wedding lounge" style="height:260px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081750_2f413817-bec0-4655-83a1-c16409f9d1ed.png" alt="Indian wedding floral corridor" style="height:260px;width:auto"/>
-      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081748_b5b7ada6-e4e6-49f7-aa48-df5c1297c0b3.png" alt="Indian couple portrait" style="height:260px;width:auto"/>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123428_96595d2a-4472-48fe-a250-89fdf58b0ae1.png" alt="Indian couple portrait" style="height:260px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081909_098347fa-3464-4562-94de-71af7985e9da.png" alt="Indian outdoor garden wedding" style="height:260px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081746_9ac50221-ba7c-4a6a-b330-e8d3941d0b97.png" alt="Indian wedding sangeet" style="height:260px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081907_e925ff9a-86a6-4ab1-992c-d290d026dfca.png" alt="Indian wedding stage" style="height:260px;width:auto"/>
@@ -1251,7 +1257,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
       <!-- duplicate -->
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081752_c16c91f3-d508-4f32-9ad5-3a36b2697d89.png" alt="Indian wedding lounge" style="height:260px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081750_2f413817-bec0-4655-83a1-c16409f9d1ed.png" alt="Indian wedding floral corridor" style="height:260px;width:auto"/>
-      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081748_b5b7ada6-e4e6-49f7-aa48-df5c1297c0b3.png" alt="Indian couple portrait" style="height:260px;width:auto"/>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123428_96595d2a-4472-48fe-a250-89fdf58b0ae1.png" alt="Indian couple portrait" style="height:260px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081909_098347fa-3464-4562-94de-71af7985e9da.png" alt="Indian outdoor garden wedding" style="height:260px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081746_9ac50221-ba7c-4a6a-b330-e8d3941d0b97.png" alt="Indian wedding sangeet" style="height:260px;width:auto"/>
       <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081907_e925ff9a-86a6-4ab1-992c-d290d026dfca.png" alt="Indian wedding stage" style="height:260px;width:auto"/>
@@ -1297,10 +1303,10 @@ h2 em,h1 em{font-style:italic;font-weight:300}
   </div>
   <div class="about-images reveal d2">
     <img class="tall"
-      src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081748_b5b7ada6-e4e6-49f7-aa48-df5c1297c0b3.png"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123428_96595d2a-4472-48fe-a250-89fdf58b0ae1.png"
       alt="Indian bride and groom portrait"/>
     <img class="short"
-      src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_070734_bb902a34-72a4-40f4-bc53-1bf05f9b3de5.png"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123430_8747b08a-f66b-4952-878d-def72fe41e5f.png"
       alt="Indian wedding first dance"/>
     <img class="short"
       src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081752_c16c91f3-d508-4f32-9ad5-3a36b2697d89.png"
@@ -1418,12 +1424,12 @@ h2 em,h1 em{font-style:italic;font-weight:300}
     </div>
     <!-- 10 Photography & Film — couple portrait -->
     <div class="service-card reveal d1">
-      <div class="service-bg" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081748_b5b7ada6-e4e6-49f7-aa48-df5c1297c0b3.png');background-position:center center"></div>
+      <div class="service-bg" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123428_96595d2a-4472-48fe-a250-89fdf58b0ae1.png');background-position:center center"></div>
       <div class="service-card-body"><span class="s-num">10</span><h3>Photography &amp; Film</h3></div>
     </div>
-    <!-- 11 Makeup & Styling — bride portrait -->
+    <!-- 11 Makeup & Styling — bridal beauty portrait -->
     <div class="service-card reveal d2">
-      <div class="service-bg" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_070836_d46744a6-033e-4be2-a946-36fcd0b82172.png');background-position:center 60%"></div>
+      <div class="service-bg" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123433_9882c5c8-bb16-430b-8ddd-38debc657f5c.png');background-position:center 30%"></div>
       <div class="service-card-body"><span class="s-num">11</span><h3>Makeup &amp; Styling</h3></div>
     </div>
     <!-- 12 Wedding Stationery — palace destination -->
@@ -1446,7 +1452,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
   </div>
   <div class="featured-grid">
     <div class="wedding-card reveal">
-      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_081748_b5b7ada6-e4e6-49f7-aa48-df5c1297c0b3.png" alt="Prateek & Tushika"/>
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FXMIZVVlal84pXqcMiIJzpcWFL/hf_20260701_123428_96595d2a-4472-48fe-a250-89fdf58b0ae1.png" alt="Prateek & Tushika"/>
       <div class="wedding-card-info">
         <p class="couple">Prateek &amp; Tushika</p>
         <p class="venue">The Leela, New Delhi</p>
