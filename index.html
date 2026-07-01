@@ -59,13 +59,12 @@ img{display:block;max-width:100%}
   display:flex;align-items:center;
   flex-shrink:0;
 }
-/* Luxury monogram SVG */
-.nav-monogram{
-  width:54px;height:auto;
-  color:rgba(255,255,255,.92);
-  transition:color .2s;display:block;
+/* Luxury monogram image */
+.nav-logo-img{
+  height:52px;width:auto;
+  object-fit:contain;display:block;
+  mix-blend-mode:screen;
 }
-.top-nav.solid .nav-monogram{color:var(--dark)}
 /* Centre links */
 .nav-center{
   display:flex;align-items:center;justify-content:center;
@@ -187,14 +186,11 @@ img{display:block;max-width:100%}
   text-align:center;z-index:10;
   opacity:0;animation:fadeIn .9s .3s forwards;
 }
-.hero-logo{
-  font-family:var(--serif);
-  font-size:clamp(36px,4.5vw,60px);
-  font-weight:300;
-  letter-spacing:.45em;
-  text-transform:uppercase;
-  color:#fff;
-  text-shadow:0 2px 32px rgba(0,0,0,.18);
+.hero-logo-img{
+  width:240px;height:auto;
+  display:block;margin:0 auto;
+  mix-blend-mode:screen;
+  filter:drop-shadow(0 0 32px rgba(201,168,76,.3));
 }
 
 /* ── Bottom text ── */
@@ -776,9 +772,11 @@ footer{
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 .footer-logo{
-  font-family:var(--serif);font-size:22px;font-weight:600;
-  letter-spacing:.28em;text-transform:uppercase;
-  color:#fff;display:block;margin-bottom:14px;text-decoration:none;
+  display:block;margin-bottom:14px;text-decoration:none;
+}
+.footer-logo-img{
+  width:160px;height:auto;display:block;
+  mix-blend-mode:screen;
 }
 .footer-tagline{
   font-size:12px;font-weight:300;line-height:1.8;
@@ -969,7 +967,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
   /* ─── HERO ─── */
   .hero{height:90vh !important;min-height:500px !important}
   .hero-logo-wrap{top:60px !important}
-  .hero-logo{font-size:clamp(28px,8vw,46px) !important;letter-spacing:.3em !important}
+  .hero-logo-img{width:170px !important}
   .hero-text{padding:0 20px 56px !important}
   .hero-text h1{font-size:clamp(30px,8.5vw,48px) !important}
   .hero-scroll-right{display:none !important}
@@ -1114,7 +1112,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
   footer{padding:40px 16px 20px !important}
   .photo-row img{height:140px !important}
   .stat{padding:20px 10px !important}
-  .hero-logo{letter-spacing:.25em !important}
+  .hero-logo-img{width:140px !important}
 }
 </style>
 </head>
@@ -1125,18 +1123,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
 ══════════════════════════════════════════ -->
 <nav class="top-nav" id="topNav">
   <a href="#home" class="nav-logo" aria-label="RD Weddings">
-    <svg class="nav-monogram" viewBox="0 0 80 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Top ornamental rule with diamond crest -->
-      <line x1="2" y1="9" x2="26" y2="9" stroke="currentColor" stroke-width="0.6" opacity="0.7"/>
-      <path d="M30 3 L37 9 L30 15 L23 9 Z" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.85"/>
-      <line x1="44" y1="9" x2="78" y2="9" stroke="currentColor" stroke-width="0.6" opacity="0.7"/>
-      <!-- RD monogram -->
-      <text x="40" y="51" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="41" font-weight="300" fill="currentColor" letter-spacing="-2">RD</text>
-      <!-- Bottom thin rule -->
-      <line x1="6" y1="54" x2="74" y2="54" stroke="currentColor" stroke-width="0.4" opacity="0.45"/>
-      <!-- WEDDINGS caption -->
-      <text x="40" y="62" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="5" font-weight="400" fill="currentColor" letter-spacing="5" opacity="0.55">WEDDINGS</text>
-    </svg>
+    <img class="nav-logo-img" src="rd-logo.png" alt="RD Weddings"/>
   </a>
   <ul class="nav-center">
     <li><a href="#home">Home</a></li>
@@ -1177,9 +1164,9 @@ h2 em,h1 em{font-style:italic;font-weight:300}
   <!-- Gradient overlay -->
   <div class="hero-overlay"></div>
 
-  <!-- Logo — upper center (like Luxus Events) -->
+  <!-- Logo — upper center -->
   <div class="hero-logo-wrap">
-    <span class="hero-logo">RD Weddings</span>
+    <img class="hero-logo-img" src="rd-logo.png" alt="RD Weddings"/>
   </div>
 
   <!-- Main headline — lower center -->
@@ -1704,7 +1691,7 @@ h2 em,h1 em{font-style:italic;font-weight:300}
 <footer>
   <div class="footer-top" style="grid-template-columns:1.6fr 1fr;gap:80px">
     <div>
-      <a href="#home" class="footer-logo">RD Weddings</a>
+      <a href="#home" class="footer-logo"><img class="footer-logo-img" src="rd-logo.png" alt="RD Weddings"/></a>
       <p class="footer-tagline">Luxury wedding planning &amp; bespoke event design. Crafting extraordinary love stories across India and the world.</p>
       <address>
         J-55, 1st &amp; 2nd Floor, Main Market<br/>
