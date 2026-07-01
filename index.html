@@ -915,6 +915,206 @@ h2 em,h1 em{font-style:italic;font-weight:300}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .85s ease,transform .85s ease}
 .reveal.up{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.12s}.d2{transition-delay:.22s}.d3{transition-delay:.32s}.d4{transition-delay:.42s}
+
+/* ══════════════════════════════════════════════
+   HAMBURGER — hidden on desktop
+══════════════════════════════════════════════ */
+.nav-hamburger{
+  display:none;
+  flex-direction:column;justify-content:center;gap:5px;
+  background:none;border:none;cursor:pointer;
+  padding:6px;flex-shrink:0;
+}
+.nav-hamburger span{
+  display:block;width:22px;height:1px;
+  background:rgba(255,255,255,.85);
+  transition:transform .3s,opacity .3s,background .3s;
+}
+.top-nav.solid .nav-hamburger span{background:var(--dark)}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — ALL MOBILE ≤900px
+   Everything stacks to 1 column
+══════════════════════════════════════════════ */
+@media(max-width:900px){
+
+  /* ─── NAV ─── */
+  .top-nav{
+    grid-template-columns:auto auto !important;
+    justify-content:space-between;
+    padding:0 20px !important;
+    height:52px !important;
+  }
+  .nav-center{display:none !important}
+  .nav-center.open{
+    display:flex !important;
+    flex-direction:column !important;
+    position:fixed;top:52px;left:0;right:0;z-index:299;
+    background:rgba(244,237,224,.98);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-top:1px solid var(--border);
+    box-shadow:0 12px 40px rgba(26,16,8,.12);
+    padding:12px 0 24px;
+    list-style:none;
+  }
+  .nav-center.open li a{
+    display:block !important;
+    padding:14px 28px !important;
+    line-height:1 !important;
+    font-size:11px !important;
+    letter-spacing:.22em !important;
+    color:var(--dark) !important;
+    text-decoration:none;
+  }
+  .nav-enquire{display:none !important}
+  .nav-hamburger{display:flex !important}
+
+  /* ─── HERO ─── */
+  .hero-logo-wrap{top:60px !important}
+  .hero-logo{font-size:clamp(22px,7vw,40px) !important;letter-spacing:.3em !important}
+  .hero-text{padding:0 20px 60px !important}
+  .hero-text h1{font-size:clamp(22px,6.5vw,38px) !important}
+  .hero-scroll-right{display:none !important}
+
+  /* ─── STATS ─── */
+  .stats{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    justify-content:unset !important;
+    align-items:unset !important;
+    padding:0 !important;
+    gap:0 !important;
+  }
+  .stat{
+    padding:24px 12px !important;
+    border-bottom:1px solid rgba(255,255,255,.1) !important;
+  }
+  .stats > .stat:nth-child(odd){
+    border-right:1px solid rgba(255,255,255,.1) !important;
+  }
+  .stats-divider{display:none !important}
+
+  /* ─── PHOTO ROWS ─── */
+  .photo-rows{padding:40px 0 0 !important}
+  .photo-row img{height:180px !important;width:auto !important}
+
+  /* ─── MARQUEE ─── */
+  .marquee-strip{padding:16px 0 !important}
+  .marquee-track span{font-size:13px !important;padding:0 18px !important}
+
+  /* ─── ABOUT ─── */
+  .about{
+    grid-template-columns:1fr !important;
+    gap:36px !important;
+    padding:64px 20px !important;
+  }
+
+  /* ─── TEAM ─── */
+  .team-section{padding:64px 20px !important}
+  .team-inner{
+    grid-template-columns:1fr !important;
+    gap:36px !important;
+  }
+  .team-photo-col{
+    aspect-ratio:3/4 !important;
+    max-height:420px !important;
+  }
+
+  /* ─── STATEMENT BURGUNDY ─── */
+  .statement-burg{
+    grid-template-columns:1fr !important;
+    gap:36px !important;
+    padding:64px 20px !important;
+  }
+  .statement-burg .img-wrap{order:-1 !important}
+  .statement-burg p{max-width:100% !important}
+
+  /* ─── SERVICES ─── */
+  .services-section{padding:64px 20px !important}
+  .services-header{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+    margin-bottom:36px !important;
+  }
+  .services-header p{text-align:left !important;max-width:100% !important}
+  .services-grid{grid-template-columns:1fr !important}
+  .service-card{aspect-ratio:16/9 !important}
+
+  /* ─── FEATURED WEDDINGS ─── */
+  .featured{padding:64px 20px !important}
+  .featured-header{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:12px !important;
+    margin-bottom:32px !important;
+  }
+  .featured-grid{
+    grid-template-columns:1fr !important;
+    gap:6px !important;
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials{padding:64px 20px !important}
+  .t-quote{font-size:clamp(15px,4.5vw,22px) !important}
+
+  /* ─── DESTINATIONS ─── */
+  .dest-section{padding:40px 0 !important}
+
+  /* ─── PROCESS ─── */
+  .process{padding:64px 20px !important}
+  .process-header{margin-bottom:40px !important}
+  .steps{
+    grid-template-columns:1fr !important;
+    gap:36px !important;
+  }
+  .steps::before{display:none !important}
+  .step{padding:0 !important}
+
+  /* ─── CTA ─── */
+  .cta-full{height:52vh !important;min-height:300px !important}
+  .cta-body h2{font-size:clamp(26px,7vw,44px) !important}
+
+  /* ─── CONTACT ─── */
+  .contact-section{
+    grid-template-columns:1fr !important;
+    gap:40px !important;
+    padding:64px 20px !important;
+  }
+  .form-row{grid-template-columns:1fr !important}
+  .checkboxes{grid-template-columns:1fr !important}
+
+  /* ─── FOOTER ─── */
+  footer{padding:48px 20px 24px !important}
+  .footer-top{
+    grid-template-columns:1fr !important;
+    gap:32px !important;
+  }
+  .footer-bottom{
+    flex-direction:column !important;
+    text-align:center !important;
+    gap:6px !important;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   SMALL MOBILE ≤480px — tighter padding
+══════════════════════════════════════════════ */
+@media(max-width:480px){
+  .top-nav{padding:0 16px !important}
+  .about,.team-section,.statement-burg,
+  .services-section,.featured,.process,
+  .testimonials{padding:48px 16px !important}
+  .contact-section{padding:48px 16px !important}
+  footer{padding:40px 16px 20px !important}
+  .photo-row img{height:140px !important}
+  .stat{padding:20px 10px !important}
+  .hero-logo{letter-spacing:.25em !important}
+}
 </style>
 </head>
 <body>
@@ -939,6 +1139,9 @@ h2 em,h1 em{font-style:italic;font-weight:300}
   <a href="#contact" class="nav-enquire">
     Enquire <span class="nav-arrow-line"></span>
   </a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ══════════════════════════════════════════
@@ -1525,6 +1728,21 @@ const nav = document.getElementById('topNav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('solid', window.scrollY > 60);
 }, {passive: true});
+
+// ── Hamburger menu ──
+const hamburger = document.getElementById('navHamburger');
+const navCenter = document.querySelector('.nav-center');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navCenter.classList.toggle('open');
+});
+// Close on link click
+navCenter.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navCenter.classList.remove('open');
+  });
+});
 
 // ── Scroll reveal ──
 const reveals = document.querySelectorAll('.reveal');
