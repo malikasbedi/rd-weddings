@@ -860,13 +860,15 @@ address{
 }
 .team-photo-col{
   overflow:hidden;
-  aspect-ratio:3/4;
-  max-height:580px;
+  width:380px;height:380px;
+  border-radius:50%;
   background:var(--cream-dark);
+  flex-shrink:0;
+  margin:0 auto;
 }
 .team-photo-col img{
   width:100%;height:100%;object-fit:cover;
-  object-position:center top;display:block;
+  object-position:center 12%;display:block;
 }
 .team-photo-placeholder{
   width:100%;height:100%;
@@ -1016,8 +1018,11 @@ h2 em,h1 em{font-style:italic;font-weight:300}
     gap:36px !important;
   }
   .team-photo-col{
-    aspect-ratio:3/4 !important;
-    max-height:420px !important;
+    width:220px !important;
+    height:220px !important;
+    border-radius:50% !important;
+    aspect-ratio:unset !important;
+    max-height:unset !important;
   }
 
   /* ─── STATEMENT BURGUNDY ─── */
